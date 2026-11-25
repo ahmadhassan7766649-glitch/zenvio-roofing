@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
-    images: ["/images/hero-house.jpg"],
+    images: ["/images/metal-roof-house.jpg"],
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ const jsonLd = {
   telephone: site.phoneDisplay,
   email: site.email,
   url: site.url,
-  image: `${site.url}/images/hero-house.jpg`,
+  image: `${site.url}/images/metal-roof-house.jpg`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

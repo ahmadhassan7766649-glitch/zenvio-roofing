@@ -99,30 +99,33 @@ export const steps = [
 
 export const projects = [
   {
-    image: "/images/hero-house.jpg",
-    title: "Clay tile re-roof",
+    image: "/images/crew-scaffolding.jpg",
+    alt: "Two Zenvio roofers lifting a new roofing sheet into place from scaffolding",
+    title: "Full re-roof with new sheeting",
     type: "Residential · Replacement",
     meta: [
       { k: "Area", v: "2,400 sq ft" },
-      { k: "Time", v: "6 days" },
+      { k: "Time", v: "5 days" },
     ],
   },
   {
-    image: "/images/installation.jpg",
-    title: "Cedar shingle restoration",
-    type: "Heritage · Full rebuild",
-    meta: [
-      { k: "Area", v: "3,100 sq ft" },
-      { k: "Time", v: "12 days" },
-    ],
-  },
-  {
-    image: "/images/shingles.jpg",
-    title: "Architectural shingle roof",
+    image: "/images/roofer-reroof.jpg",
+    alt: "Roofer fixing new corrugated roofing over timber battens",
+    title: "Corrugated sheet upgrade",
     type: "Residential · New install",
     meta: [
       { k: "Area", v: "1,850 sq ft" },
       { k: "Time", v: "3 days" },
+    ],
+  },
+  {
+    image: "/images/clay-tiles.jpg",
+    alt: "Close-up of new terracotta clay roof tiles",
+    title: "Clay tile restoration",
+    type: "Villa · Restoration",
+    meta: [
+      { k: "Area", v: "3,100 sq ft" },
+      { k: "Time", v: "9 days" },
     ],
   },
 ];

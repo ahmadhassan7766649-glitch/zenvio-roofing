@@ -98,15 +98,15 @@ export default function Home() {
         <section className="px-2 pb-2 sm:px-3 sm:pb-3">
           <div className="relative overflow-hidden rounded-[28px] bg-navy-950">
             <Image
-              src="/images/hero-house.jpg"
-              alt="Home with a newly installed clay tile roof"
+              src="/images/metal-roof-house.jpg"
+              alt="Brick house with a new standing-seam metal roof"
               fill
               preload
               sizes="100vw"
-              className="object-cover object-[70%_center]"
+              className="object-cover object-[center_40%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/65 to-navy-950/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
 
             <div className="container-x relative grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16 lg:py-28">
               <div className="text-white">
@@ -271,13 +271,13 @@ export default function Home() {
                 title="You’ve probably dealt with a roofer like this before."
                 text="Most roofing headaches come from the same few problems. We built our whole process to remove them."
               />
-              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-3xl">
+              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-[16/10] lg:aspect-[4/3]">
                 <Image
-                  src="/images/installation.jpg"
-                  alt="Roofer installing new timber sheathing on a roof"
+                  src="/images/roofer-orange-helmet.jpg"
+                  alt="Zenvio roofer in a safety helmet replacing damaged roof sheets"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover"
+                  className="object-cover object-[center_30%]"
                 />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-2xl bg-white/95 p-4 backdrop-blur">
                   <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-navy-800 text-white">
@@ -372,31 +372,30 @@ export default function Home() {
             title="Roofs we’re proud to put our name on."
             text="A selection of recent projects across residential, heritage and commercial properties."
           />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {projects.map((p, i) => (
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((p) => (
               <article
                 key={p.title}
-                className={`group flex flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-navy-800/10 ${i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+                className="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-navy-900"
               >
-                <div className={`relative overflow-hidden ${i === 0 ? "aspect-[4/3] lg:aspect-auto lg:min-h-[420px] lg:flex-1" : "aspect-[16/10]"}`}>
-                  <Image
-                    src={p.image}
-                    alt={p.title}
-                    fill
-                    sizes={i === 0 ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
-                    className="object-cover transition duration-700 group-hover:scale-105"
-                  />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-navy-800 backdrop-blur">
-                    {p.type}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between gap-4 p-6">
-                  <h3 className="font-display text-xl font-bold text-navy-800">{p.title}</h3>
-                  <dl className="flex shrink-0 gap-5 text-right">
+                <Image
+                  src={p.image}
+                  alt={p.alt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-navy-800 backdrop-blur">
+                  {p.type}
+                </span>
+                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <h3 className="font-display text-2xl font-bold">{p.title}</h3>
+                  <dl className="mt-4 flex gap-6 border-t border-white/15 pt-4">
                     {p.meta.map((m) => (
                       <div key={m.k}>
-                        <dt className="text-xs uppercase tracking-wide text-muted">{m.k}</dt>
-                        <dd className="font-display font-bold text-navy-800">{m.v}</dd>
+                        <dt className="text-xs uppercase tracking-wide text-white/60">{m.k}</dt>
+                        <dd className="font-display font-bold">{m.v}</dd>
                       </div>
                     ))}
                   </dl>
@@ -504,11 +503,11 @@ export default function Home() {
         <section id="contact" className="px-2 pb-2 sm:px-3 sm:pb-3">
           <div className="relative overflow-hidden rounded-[28px] bg-navy-950">
             <Image
-              src="/images/shingles.jpg"
+              src="/images/clay-tiles.jpg"
               alt=""
               fill
               sizes="100vw"
-              className="object-cover opacity-20"
+              className="object-cover opacity-25"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-950/95 to-navy-900/80" />
             <div className="container-x relative grid gap-12 py-20 sm:py-24 lg:grid-cols-2 lg:gap-16">
@@ -598,13 +597,7 @@ export default function Home() {
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-navy-800/10 pt-6 text-sm text-muted sm:flex-row sm:justify-between">
           <p>© 2026 {site.legalName}. All rights reserved.</p>
-          <p className="text-xs">
-            Photos:{" "}
-            <a className="underline" href="https://commons.wikimedia.org/wiki/File:Modern_house_exterior_with_red_roof_and_landscaped_garden_under_clear_blue_sky.jpg" target="_blank" rel="noopener noreferrer">Shixart1985</a>{" "}
-            (CC BY 2.0),{" "}
-            <a className="underline" href="https://commons.wikimedia.org/wiki/File:Shingles_atop_roof.jpg" target="_blank" rel="noopener noreferrer">Joe Mabel</a>{" "}
-            (CC BY 4.0), NPS (public domain).
-          </p>
+          <p>Licensed & insured roofing contractor.</p>
         </div>
       </footer>
 
